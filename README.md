@@ -13,12 +13,10 @@ Usage:
       PublicKey myPublicKey = rsa.getPublicKey();
       
       // Test encrypt by my public key
-      String encryptedData = rsa.encryptRsaByPublicKey("Hello! I'm RSA4J".getBytes(), myPublicKey);
+      String encryptedData = rsa.encryptRsaByPublicKey("Hi! I'm RSA4J".getBytes(), myPublicKey);
       System.out.println("Encrypted data: " + encryptedData);
 
-      // Test decrypt by my private key 
-      encryptedData = "agp5lTTD44mZ06EU77X3aby3f7fruhXt7UaG37HyR6XofPB7MMRuVE9JDhDACyauOhXzUHiKa0/DI4WD5dOB1qqmzGxjvIGJyIdVI6Nj3fXX17jVXncPlgfuYJ7TfYo2yqDMbqlhcoSfSgtbrdXtpnqiC1U5+t9a5u+V3MZXt4AUTGaVzz+udSGB/ocyz7ONVr4TyT5MULL5QrO/kNKUMr6VG5JwUeYyJNX/bxpjOWJupdLd5YQPEWV1DJmOVENV682HHl1/CqAG6ayhQbtPV+6GdlDwxgP2+omyTNANr8q7VwEvMt8mnV+839Yk25iQRaLNCxzoJA9xFPDY+rHXm2kRKYAcpaidPMoFh+ZPLAh+Fm1lLFdYgzvW5uWscyYNCmyRzcqQt3tmdRiWmOsOO/VE2CL55TuIZlRRYgy+yY9Go64opusL7FbEeVLSf0jQa+h8zwSuK+Cz+BCd54sxsuAWVQqXHxfLPJBEeWaQ2Iwns+HPxDZCL6eqPOvC6M4X5darE5ber2nnpVLfPRMXZ1ppo6Dbv15i+29/GgaySiB9f34hdECds2x88OLBB7kyeFFAPjkQs2IXEkY4cD0AugDqEHfm12HnTZi159mpl47LaAYZK2nXfpKLfsV4GB65o7u9uFQ9FjYC4jiZn8pccPQQ7/ZelFEG6gf8XKREdUs=";
-      
+      // Test decrypt by my private key
       PrivateKey myPrivateKey = rsa.getPrivateKey(); 
       String decryptedData = rsa.decryptRsaByPrivateKey(encryptedData.getBytes(), myPrivateKey);
       System.out.println("Raw data: " + decryptedData);
@@ -28,5 +26,6 @@ Usage:
     }
     
     ============ RESULT ============
-    Raw data: Hi! I'm RSA4J!
+    Encrypted data: NI0CTwiYVKK0+QZ9GnreyicW0hmczBQiZFI3a9BO4ILhq/0uTFRxnVOF3lhNw00TE2FKxXZP0IjGi5aOq/7ZiV712nT8drH8SV7vXXvf/1/F2LYvj2FtQCAl9BfQw7sWmapBVGtWnQq24tWVzznN9EO38B/1fFybx87zWp+wrmj+RKBipQxwfCRT27wj+2yX6a+1QWR2SohjLyW53O60u6sur9TDGnp2wGbuiLc4KUBe/7nwADz8MesIBHxl3TPZ1qqrajaHeq2GxfmdAdt8xf9qfHNcdPYyzRV+7wm/sCaue53vD1Pc5cHUkjVnbfmc5vlhlvKS5CuA5Y12sPTQxwyBEhr3gTr/rKbOhmXj1uDZItI4V7qZ6o/7AMruI/HvF3QddRfJpRkJNNWlVgEpppDOXIyP2pK23K8dmKPca8qVlbyRreD9JJSirSTArCEom5drWiUAx+2vbmxUMeQEEWymKVo7FEgocH2BfAlhE4WtRWLPR76anewsR1pM0YOug8r7LzrUjpf/elXdVoJwgXN5t9fxQgdphZZvzVoB1iJbjcpCY6m4GCygV069v32ohmB4P+LixSLSQlciP13TtM3gBnQL5eMLH6l0W5aPVVIpHLS9FoPvAK29wHAHTNU9PneLAP+zNnYn3QncwRUZHWsbEY0XNC77bRIwiPnd5sg=
+    Raw data: Hi! I'm RSA4J
     
